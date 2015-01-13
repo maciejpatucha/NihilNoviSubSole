@@ -1,7 +1,7 @@
 CC=clang
 CFLAGS=-g -c -Wall
 LDFLAGS=
-SOURCES=main.c
+SOURCES=main.c options_parsing.c logging.c
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=DMServer
 
@@ -13,7 +13,11 @@ $(EXECUTABLE): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
 	
-.PHONY: clean
+.PHONY: clean run
 
 clean: 
-	-rm -rf *.o $(EXECUTABLE)		
+	-rm -rf *.o $(EXECUTABLE)
+
+run:
+	./$(EXECUTABLE) --no-fork
+

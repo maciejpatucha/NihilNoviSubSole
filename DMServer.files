@@ -1,2 +1,9 @@
 main.c
 Makefile
+options_parsing.h
+options_parsing.c
+common_headers.h
+task_executors.h
+task_executors.c
+logging.h
+logging.c

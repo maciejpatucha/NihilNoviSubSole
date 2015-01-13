@@ -3,3 +3,7 @@
 
 #Executable
 DMServer
+
+#QtCreator temp files
+*.user
+*.autosave
